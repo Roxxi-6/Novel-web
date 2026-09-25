@@ -1,0 +1,398 @@
+:root {
+  --ink: #25231f;
+  --muted: #77736d;
+  --paper: #fbf8f1;
+  --surface: #fffdf8;
+  --accent: #a64b32;
+  --accent-dark: #7f3625;
+  --line: #e8e1d6;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: #514d47;
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  padding: 76px 0 70px;
+  background:
+    radial-gradient(circle at 85% 25%, #f0ddc7 0, transparent 28%),
+    linear-gradient(135deg, #f5eadb, #fbf8f1 65%);
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.eyebrow,
+.genre {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+}
+
+h1 {
+  max-width: 650px;
+  margin: 8px 0 18px;
+  font-size: clamp(2.7rem, 7vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -2px;
+}
+
+.hero p,
+.page-content p {
+  color: #625d56;
+}
+
+.hero p {
+  max-width: 560px;
+  margin-bottom: 28px;
+  font-size: 1.1rem;
+}
+
+.search-form {
+  display: flex;
+  max-width: 540px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: white;
+  box-shadow: 0 8px 24px #4b382011;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 0;
+  outline: 0;
+  font: inherit;
+}
+
+.search-form button,
+.button {
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 19px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+.search-form button:hover,
+.button:hover {
+  background: var(--accent-dark);
+}
+
+main {
+  padding: 58px 0 76px;
+}
+
+.section-heading {
+  margin-bottom: 23px;
+}
+
+.section-heading h2 {
+  margin-bottom: 4px;
+  font-size: 2rem;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 28px;
+}
+
+.filter {
+  padding: 8px 15px;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  background: transparent;
+  color: #625d56;
+  cursor: pointer;
+  font: inherit;
+}
+
+.filter:hover,
+.filter.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.novel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.novel-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.novel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px #34261914;
+}
+
+.cover {
+  min-height: 235px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: white;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: bold;
+  line-height: 1.15;
+}
+
+.cover-1 { background: linear-gradient(145deg, #264653, #588b83); }
+.cover-2 { background: linear-gradient(145deg, #713e5a, #c06c5a); }
+.cover-3 { background: linear-gradient(145deg, #3c4b35, #a3a45e); }
+.cover-4 { background: linear-gradient(145deg, #35445c, #7589a6); }
+
+.novel-info {
+  padding: 17px;
+}
+
+.genre {
+  margin-bottom: 7px;
+  font-size: 0.72rem;
+}
+
+.novel-info h3 {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+}
+
+.author {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.description {
+  margin-bottom: 15px;
+  color: #625d56;
+  font-size: 0.9rem;
+}
+
+.read-link {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.empty-state {
+  display: none;
+  padding: 32px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.page-content {
+  max-width: 760px;
+}
+
+.page-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.page-content h2 {
+  margin-top: 32px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 850px) {
+  .novel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .navbar {
+    min-height: 68px;
+  }
+
+  nav {
+    gap: 14px;
+    font-size: 0.85rem;
+  }
+
+  .brand {
+    font-size: 1.45rem;
+  }
+
+  .hero {
+    padding: 58px 0;
+  }
+
+  .search-form button {
+    padding-inline: 13px;
+  }
+
+  .novel-grid {
+    gap: 13px;
+  }
+
+  .cover {
+    min-height: 175px;
+    padding: 15px;
+    font-size: 1.3rem;
+  }
+
+  .novel-info {
+    padding: 13px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  nav {
+    gap: 9px;
+    font-size: 0.78rem;
+  }
+
+  .novel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cover {
+    min-height: 220px;
+  }
+}
